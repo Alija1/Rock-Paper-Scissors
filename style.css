@@ -1,0 +1,23 @@
+
+body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.btn-container {
+    width: 100%;
+    height: auto;
+    margin: 0% 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5%;
+}
+
+#btn {
+    width: 200px;
+    height: 100px;
+    background-color: black;
+    color: antiquewhite;
+}

@@ -47,34 +47,3 @@ const playerSelection = getPlayerChoice ();
 const computerSelection = getComputerChoice();
 
 console.log(playRound(computerSelection, playerSelection));
-
-
-function game() {
-    let computerScore = 0,
-      playerScore = 0;
-  
-    for (i = 0; i < 3; i++) {
-      const result = playRound(getPlayerChoice(), getComputerChoice());
-      console.log(result);
-      if (result.includes("win")) {
-        playerScore++;
-        console.log(`computer: ${computerScore} | player: ${playerScore}`);
-      } else if (result.includes("lose")) {
-        computerScore++;
-        console.log(`computer: ${computerScore} | player: ${playerScore}`);
-      }
-      
-    }
-    console.log(
-        "Final Results: Player: " + playerScore + " Computer: " + computerScore
-      );
-      if (playerScore > computerScore) {
-        console.log("You win the game!");
-      } else if (playerScore < computerScore) {
-        console.log("You lose the game.");
-      } else {
-        console.log("The game was an overall tie.");
-      }
-  }
-  
-  game();
