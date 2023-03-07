@@ -13,11 +13,18 @@ function getComputerChoice() {
     }
     else "You have to type in Rock, Paper or Scissors!"
 }
-      
 
-function getPlayerChoice() {
-    const playerInput = prompt("type your choice: Rock, Paper or Scissors!").toLowerCase();
-    return playerInput;
+document.getElementById("btn").click = function getPlayerChoice() {
+    const playerInput = document.getElementById("btn").value;
+
+    if (playerInput === "0"){
+        return "rock"
+    }
+    else if (playerInput === "1"){
+        return "paper"
+    }
+    else (playerInput === "2")
+        return "scissors"
 }
 
 

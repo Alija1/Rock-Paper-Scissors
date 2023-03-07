@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="rps.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="rps-img"><img src="images/rps.jpg"></div>
     <div class="btn-container">
-        <button id=btn class="btn-r">ROCK</button>
-        <button id=btn class="btn-p">PAPER</button>
-        <button id=btn class="btn-s">SCISSORS</button>
+        <button id=btn class="btn-r" value="0">ROCK</button>
+        <button id=btn class="btn-p" value="1">PAPER</button>
+        <button id=btn class="btn-s" value="2">SCISSORS</button>
     </div>
     <div class="score-container">
-        <div class="score-player"></div>
-        <div class="score-cpu"></div>
+        <div id=score class="score-player">YOU</div>
+        <div id=score class="score-cpu">CPU</div>
     </div>
 </body>
 </html>
