@@ -1,56 +1,67 @@
 
 
-function getComputerChoice() {
-    const computerChoice = Math.floor(Math.random() * 3);
-    if (computerChoice === 0){
-        return "rock"
+
+
+let playerSelection = playerChoice();
+
+function playerChoice() {
+
+    let computerSelection = getComputerChoice();
+
+    function getComputerChoice() {
+        const computerChoice = Math.floor(Math.random() * 3);
+        if (computerChoice === 0){
+            return "rock"
+        }
+        else if (computerChoice === 1){
+            return "paper"
+        }
+        else if (computerChoice === 2){
+            return "scissors"
+        }
+        else "You have to type in Rock, Paper or Scissors!"
+
+        console.log(computerSelection);
     }
-    else if (computerChoice === 1){
-        return "paper"
-    }
-    else if (computerChoice === 2){
-        return "scissors"
-    }
-    else "You have to type in Rock, Paper or Scissors!"
+
+    const btnR = document.querySelector('.btn-r');
+    btnR.addEventListener('click', () => {
+        if (getComputerChoice() === "rock") {
+            console.log(getComputerChoice());
+            console.log("it's a tie replay this round");
+        }
+        else if
+            (getComputerChoice() === "paper") {
+            console.log(getComputerChoice());
+            console.log("paper beats rock! CPU wins!");
+        }
+        else
+            console.log ("rock beats scissors! You win!");
+    });
+
+    const btnP = document.querySelector('.btn-p');
+    btnP.addEventListener('click', () => {
+        console.log(getComputerChoice());
+        if (getComputerChoice() === "paper") {
+            console.log("it's a tie replay this round");
+        }
+        else if
+            (getComputerChoice() === "rock") {
+            console.log("scissors beats paper! CPU wins!");
+        }
+        else console.log ("paper beats rock! You win!");
+    });
+
+    const btnS = document.querySelector('.btn-s');
+    btnS.addEventListener('click', () => {
+        console.log(getComputerChoice());
+        if (getComputerChoice() === "scissors") {
+            console.log("it's a tie replay this round");
+        }
+        else if
+            (getComputerChoice() === "rock") {
+            console.log("rock beats scissors! CPU wins!");
+        }
+        else console.log ("scissors beats paper! You win!");
+    });
 }
-
-document.getElementById("btn").click = function getPlayerChoice() {
-    const playerInput = document.getElementById("btn").value;
-
-    if (playerInput === "0"){
-        return "rock"
-    }
-    else if (playerInput === "1"){
-        return "paper"
-    }
-    else (playerInput === "2")
-        return "scissors"
-}
-
-
-
-function playRound (computerSelection, playerSelection) {
-
-    console.log(computerSelection)
-
-    if (computerSelection === playerSelection) {
-        return "it's a tie replay this round";
-      } else if (computerSelection === "rock" && playerSelection === "paper") {
-        return "You won this round! paper beats rock";
-      } else if (computerSelection === "rock" && playerSelection === "scissors") {
-        return "Computer won this round! rock beats scissors";
-      } else if (computerSelection === "paper" && playerSelection === "scissors") {
-        return "You won this round! scissors beats paper";
-      } else if (computerSelection === "paper" && playerSelection === "rock") {
-        return "Computer won this round! paper beats rock";
-      } else if (computerSelection === "scissors" && playerSelection === "rock") {
-        return "You won this round! rock beats scissors";
-      } else if (computerSelection === "scissors" && playerSelection === "paper") {
-        return "Computer won this round! scissors beats paper";
-      }
-    }
-
-const playerSelection = getPlayerChoice ();
-const computerSelection = getComputerChoice();
-
-console.log(playRound(computerSelection, playerSelection));
